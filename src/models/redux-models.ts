@@ -1,5 +1,5 @@
 export interface TodoModel{
-    "userID": number,
+    "userId": number,
     "id": number,
     "title": string,
     "completed": boolean
