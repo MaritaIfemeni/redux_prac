@@ -1,3 +1,9 @@
+## Practising Redux with React
+
+- Based on the tutorial: 
+    [Made By Jodiss Tribhu](https://itnext.io/build-a-react-redux-with-typescript-using-redux-toolkit-package-d17337aa6e39)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
