@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { useAppDispatch, useAppSelector } from "../hooks/redux-hooks";
 import { fetchTodos, fetchParticularTodo } from "../store/todo-actions";
 import "./Todo.css";
+import Update from "./Update";
 
 const Todo = () => {
   const [todoId, setTodoId] = useState(1);
@@ -23,6 +24,7 @@ const Todo = () => {
 
   return (
     <div>
+      <Update {...particularTodo} />
       <div>
         <label>Enter Todo Id: </label>
         <input
