@@ -4,7 +4,17 @@ import { RootState } from "./index";
 import { TodoModel } from "../models/redux-models";
 import todoService from "../service/todoService";
 import todoSlice from "./todo-slice";
-import { UpdateTodoAction } from "../models/redux-models";
+
+
+type TodoArrayModel = Array<TodoModel>;
+
+interface TodoState {
+  todo: TodoArrayModel;
+}
+
+const initialState: TodoState = {
+  todo: [],
+};
 
 export const todoActions = todoSlice.actions;
 
@@ -33,10 +43,10 @@ export const fetchParticularTodo = (
   };
 };
 
-// make function to update todo
+
 export const UpdateTodo = (
   todo_id: number,
-  title: string
+  title: string,
 ): ThunkAction<void, RootState, unknown, AnyAction> => {
   return async (dispatch, getstate) => {
     const response: TodoModel = await todoService.updateTodoById(

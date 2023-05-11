@@ -10,8 +10,8 @@ export interface TodoArrayModel {
   particular_todo: TodoModel;
 }
 
-export interface UpdateTodoAction {
-  type: "todos/update";
+interface UpdateTodoAction {
+  type: 'UPDATE_TODO';
   payload: {
     id: number;
     title: string;
